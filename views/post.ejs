@@ -1,0 +1,9 @@
+<%- include('partials/header.ejs') %>
+<% posts.forEach(function(post){ %>
+   <% if(post.title === title){ %>
+        <h1><%= title %> </h1>
+        <p><%= post.des %> </p>
+   <% } %>
+<% }) %> 
+
+<%- include('partials/footer.ejs') %>

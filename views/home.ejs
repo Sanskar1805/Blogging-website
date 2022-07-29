@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %> 
+<h1 class = "heading">Home</h1>
+<p><%=des%></p>
+<% posts.forEach(function(post){ %>
+     <% title= post.title; %>
+     <% des =  post.des.substring(0,100) + " ..."; %>
+     <h1 class="heading"><%= title %></h1>
+     <% let titlenew = "/posts/" + post._id %>
+     <p class = "paragraph"><%= des %> <a href=<%= titlenew %>  style="text-decoration:none">Read More</a>  </p>
+<%    }); %> 
+<button class="btn btn-dark"><a href="/compose" style="text-decoration:none;color:white">compose</a></button>
+    
+<%- include('partials/footer.ejs') %> 
+    
